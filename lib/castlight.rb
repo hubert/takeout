@@ -1,5 +1,7 @@
 require "castlight/version"
 
 module Castlight
-  # Your code goes here...
+  autoload :MenuImporter, 'castlight/menu_importer'
+  autoload :RestaurantMenu, 'castlight/restaurant_menu'
+  autoload :MenuItem, 'castlight/menu_item'
 end
