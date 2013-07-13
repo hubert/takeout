@@ -1,4 +1,4 @@
-module Castlight
+module Takeout
   class MenuItem
     attr_reader :price, :items
 

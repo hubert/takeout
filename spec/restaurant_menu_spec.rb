@@ -1,6 +1,6 @@
-require 'castlight'
+require 'takeout'
 
-module Castlight
+module Takeout
   describe RestaurantMenu do
     describe '#best_price' do
       it 'finds the lowest price for a single item' do

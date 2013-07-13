@@ -1,4 +1,4 @@
-module Castlight
+module Takeout
   class RestaurantMenu
     attr_reader :id, :menu_items
 
