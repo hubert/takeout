@@ -12,6 +12,10 @@ module Castlight
       items.sort.eql?(other.items.sort)
     end
 
+    def contains_part_of?(item_list)
+      !(item_list & items).empty?
+    end
+
     def <=>(other)
       object_id <=> other.object_id
     end
