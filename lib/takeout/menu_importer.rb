@@ -12,7 +12,7 @@ module Takeout
       
       def parse_items(line_items_array)
         line_items_array.map do |line_item|
-          MenuItem.new(price: line_item.shift.to_f, items: line_item)
+          MenuItem.new(price: line_item.shift.to_f, items: line_item.map { |li| li.strip.gsub(' ', '_') })
         end
       end
     end
