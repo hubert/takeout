@@ -1,29 +1,21 @@
-# Castlight
+# Takeout
 
-TODO: Write a gem description
+## To run
 
-## Installation
+1) First, clone the repo
 
-Add this line to your application's Gemfile:
+2) Either:
 
-    gem 'castlight'
+```shell
+$ takeout order FILENAME ITEM1 ITEM2... ITEM N
+```
 
-And then execute:
+or using thor directly
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install castlight
+```shell
+$ thor takeout_app:order FILENAME ITEM1 ITEM2... ITEM N
+```
 
 ## Usage
 
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+Depends on ruby 2.0.0, as named parameters are used.
