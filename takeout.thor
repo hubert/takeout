@@ -10,7 +10,8 @@ module Takeout
         best_price = restaurant_menu.best_price(items)
         best_price ? { id: restaurant_menu.id, price: best_price } : nil
       end
-      if lowest_price = best_prices.compact.min { |best_price| best_price[:price] }
+      p best_prices
+      if lowest_price = best_prices.compact.min_by { |best_price| best_price[:price] }
         p "Restaurant #{lowest_price[:id]} has your order for #{lowest_price[:price]}"
       else
         p "No restaurant can fulfill your order"
