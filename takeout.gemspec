@@ -5,7 +5,7 @@ require 'takeout/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "takeout"
-  spec.version       = takeout::VERSION
+  spec.version       = Takeout::VERSION
   spec.authors       = ["hubert"]
   spec.email         = ["hubert77@gmail.com"]
   spec.description   = %q{castlight puzzle}
