@@ -2,9 +2,9 @@
 
 ## To run
 
-1) First, clone the repo
-
-2) Either:
+1) Clone the repo
+2) Bundle to install the necessary gems
+3) Either:
 
 ```shell
 $ takeout order FILENAME ITEM1 ITEM2... ITEM N
