@@ -1,6 +1,6 @@
 require 'csv'
 
-module Castlight
+module Takeout
   class MenuImporter
     class << self
       def import(filename)
