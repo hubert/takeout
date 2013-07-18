@@ -1,4 +1,5 @@
 require "takeout/version"
+require 'takeout/core_ext/array'
 
 module Takeout
   autoload :MenuImporter, 'takeout/menu_importer'
