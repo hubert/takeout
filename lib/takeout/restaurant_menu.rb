@@ -22,7 +22,7 @@ module Takeout
       return if items_on_menu.empty?
       prices = []
       items_on_menu.each_with_index do |menu_item, index|
-        remaining_items = order_list - menu_item.items
+        remaining_items = order_list.dup.remove_once(menu_item.items)
         prices << if remaining_items.empty?
           #p "done, price is #{menu_item.price}"
           menu_item.price

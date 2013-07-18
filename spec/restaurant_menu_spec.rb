@@ -51,6 +51,14 @@ module Takeout
         menu = RestaurantMenu.new(id: 1, menu_items: [item1, item2, combo1, combo2, combo3])
         expect(menu.best_price(['toro', 'maguro', 'unagi', 'hotate'])).to eql(48.0)
       end
+
+      it 'handles multiple quanitities of the same item' do
+        item1 = MenuItem.new(price: 10.0, items: ['toro'])
+        item2 = MenuItem.new(price: 10.0, items: ['chu toro'])
+        combo1 = MenuItem.new(price: 19.0, items: ['toro', 'chu toro', 'maguro'])
+        menu = RestaurantMenu.new(id: 1, menu_items: [item1, item2, combo1])
+        expect(menu.best_price(['toro', 'chu toro', 'toro'])).to eql(29.0)
+      end
     end
   end
 end
